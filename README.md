@@ -5,6 +5,7 @@ Whether in the midst of the crowd at Belluna Dome or sitting in the dark in your
 
 OpenOshi is fully DIY: it consists of a 3D-printable handle and screw-in translucent blade, a central PCB with an RGBW LED, and a simple board programming interface (AVR 6-pin ICSP) to add your favorite idols' colors. OpenOshi is open-source, too; all are free to modify it to their liking or submit improvements.
 
+# Extra info:
 For the handle and cap, I suggest a neutral color of PLA filament, and for the tube, transparent PETG printed at 100% rectilinear infill.
 The PCB is made to OSH Park specifications and tolerances as of June 2023. Modify as needed to meet your preferred PCB supplier's capabilities.
 Control software written in AVR C is provided, and can be flashed onto the board using avrdude.
