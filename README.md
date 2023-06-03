@@ -1,4 +1,4 @@
-# open-oshi
+# OpenOshi
 A fully open-source, DIY idol concert lightstick. (v1.0)
 
 Whether in the midst of the crowd at Belluna Dome or sitting in the dark in your bedroom, cheer on your favorite idols with this fully customizable lightstick. Designed in the image of the King Blade X10, ubiquitous in Japan, this lightstick runs off of a single lithium-ion battery to shine for hours of your favorite songs.
