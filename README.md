@@ -8,7 +8,7 @@ OpenOshi is fully DIY. It consists of:
 - a central PCB with an RGBW LED
 - a simple board programming interface to add your favorite idols' colors
 
-OpenOshi is open-source, too; all are free to modify it to their liking or submit improvements.
+OpenOshi is open-source; all are free to modify it to their liking or submit improvements.
 
 **Building tips**
 - For the handle and cap, I suggest a neutral color of PLA filament, and for the tube, transparent PETG printed at 100% rectilinear infill.
