@@ -1,7 +1,7 @@
 # OpenOshi
 A fully open-source, DIY idol concert lightstick. (v1.0)
 
-Whether in the midst of the crowd at Belluna Dome or sitting in the dark in your bedroom, cheer on your favorite idols with this powerful, fully customizable lightstick. Designed in the image of the King Blade X10, ubiquitous in Japan, this lightstick runs off of a single lithium-ion battery to shine bright for hours of your favorite songs and performances.
+Whether in the midst of the crowd at Belluna Dome or sitting in the dark in your bedroom, cheer on your favorite idols with this powerful, fully customizable lightstick. Designed in the image of the King Blade X10, ubiquitous in Japan, this lightstick runs off of a single lithium-ion battery to shine bright for hours of your favorite performances.
 
 OpenOshi is fully DIY. It consists of:
 - a 3D-printable handle and screw-in translucent blade
