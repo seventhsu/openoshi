@@ -1,0 +1,12 @@
+fp-info-cache
+fp-lib-table
+sym-lib-table
+*-backups/
+*-bak
+*.kicad_prl
+_autosave*
+*.drl
+*.lck
+lib/*.bak
+\#auto_saved_files#
+.DS_Store
