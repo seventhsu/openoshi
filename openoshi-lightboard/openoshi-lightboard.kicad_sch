@@ -5,7 +5,7 @@
 	(uuid "3cd9b0e5-3136-42a9-9d8a-7f3541f9f7ee")
 	(paper "A4")
 	(lib_symbols
-		(symbol "Battery_Management:MCP73831-3-MC"
+		(symbol "Battery_Management:MCP73831-2-OT"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -18,7 +18,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "MCP73831-3-MC"
+			(property "Value" "MCP73831-2-OT"
 				(at 1.27 6.35 0)
 				(effects
 					(font
@@ -27,7 +27,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.7x1.4mm"
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
 				(at 1.27 -6.35 0)
 				(effects
 					(font
@@ -39,7 +39,7 @@
 				)
 			)
 			(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf"
-				(at -3.81 -1.27 0)
+				(at 0 -18.288 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -47,7 +47,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Single cell, Li-Ion/Li-Po charge management controller, 4.35V, Tri-State Status Output, in DFN-8 package"
+			(property "Description" "Single cell, Li-Ion/Li-Po charge management controller, 4.20V, Tri-State Status Output, in SOT23-5 package"
 				(at 0 0 0)
 				(effects
 					(font
@@ -65,7 +65,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "DFN*3x2mm*P0.5mm*EP1.7x1.4mm*"
+			(property "ki_fp_filters" "SOT?23*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -74,7 +74,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "MCP73831-3-MC_0_1"
+			(symbol "MCP73831-2-OT_0_1"
 				(rectangle
 					(start -7.62 5.08)
 					(end 7.62 -5.08)
@@ -87,7 +87,7 @@
 					)
 				)
 			)
-			(symbol "MCP73831-3-MC_1_1"
+			(symbol "MCP73831-2-OT_1_1"
 				(pin input line
 					(at -10.16 -2.54 0)
 					(length 2.54)
@@ -98,45 +98,7 @@
 							)
 						)
 					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -7.62 2.54 0)
-					(length 2.54)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 7.62 270)
-					(length 2.54)
-					(hide yes)
-					(name "V_{DD}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -154,7 +116,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -172,7 +134,7 @@
 							)
 						)
 					)
-					(number "6"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -198,25 +160,6 @@
 						)
 					)
 				)
-				(pin passive line
-					(at 10.16 2.54 180)
-					(length 2.54)
-					(hide yes)
-					(name "V_{BAT}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin tri_state line
 					(at 10.16 -2.54 180)
 					(length 2.54)
@@ -227,7 +170,7 @@
 							)
 						)
 					)
-					(number "5"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3290,6 +3233,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "CONSIDER GOING TO PICOSTAR FEMTOFETS"
+		(exclude_from_sim no)
+		(at 228.092 159.004 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "67f515a6-b87e-4285-a563-fb9bb4fd591c")
+	)
 	(junction
 		(at 113.03 43.18)
 		(diameter 0)
@@ -4031,97 +3984,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:CSD16301Q2")
-		(at 252.73 133.35 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "16e167ab-e3b0-4fb6-abd2-482f96227977")
-		(property "Reference" "Q4"
-			(at 259.08 132.0799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "CSD16301Q2"
-			(at 259.08 134.6199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_SON:Texas_DQK"
-			(at 257.81 135.255 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/csd16301q2.pdf"
-			(at 257.81 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "5A Id, 25V Vds, NexFET N-Channel Power MOSFET, 19mOhm Ron, SON-6"
-			(at 252.73 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "f36d585c-e8bc-472a-bc49-655660560513")
-		)
-		(pin "7"
-			(uuid "a2cab134-c083-4482-a859-8fc63023fdbd")
-		)
-		(pin "1"
-			(uuid "9e41a150-9baa-4abd-9a02-1da4559d85f2")
-		)
-		(pin "4"
-			(uuid "75aa81a6-40fc-4018-8b64-5e6af6fc1c80")
-		)
-		(pin "6"
-			(uuid "6899c0c6-c658-49fc-a2af-105092dd32e6")
-		)
-		(pin "5"
-			(uuid "bb3f685c-fd25-419c-87c6-102690ebb89b")
-		)
-		(pin "2"
-			(uuid "a83004e7-c33e-42d2-bd19-a55261c41298")
-		)
-		(pin "8"
-			(uuid "ca805fd3-25d3-454b-b75d-6a445260745d")
-		)
-		(instances
-			(project "openoshi-lightboard"
-				(path "/3cd9b0e5-3136-42a9-9d8a-7f3541f9f7ee"
-					(reference "Q4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 243.84 109.22 0)
 		(unit 1)
@@ -4252,97 +4114,6 @@
 			(project "openoshi-lightboard"
 				(path "/3cd9b0e5-3136-42a9-9d8a-7f3541f9f7ee"
 					(reference "R8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:CSD16301Q2")
-		(at 229.87 140.97 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2dae9dc1-48af-42f8-9739-687e688508d4")
-		(property "Reference" "Q3"
-			(at 236.22 139.6999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "CSD16301Q2"
-			(at 236.22 142.2399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_SON:Texas_DQK"
-			(at 234.95 142.875 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/csd16301q2.pdf"
-			(at 234.95 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "5A Id, 25V Vds, NexFET N-Channel Power MOSFET, 19mOhm Ron, SON-6"
-			(at 229.87 140.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "50701110-49c3-404f-a4d6-34c416ca36a9")
-		)
-		(pin "7"
-			(uuid "a2b33381-f8c0-4fa1-bac3-1a19fa8ca29c")
-		)
-		(pin "1"
-			(uuid "1e07c464-7c45-420e-815e-b391d6d56705")
-		)
-		(pin "4"
-			(uuid "ecac8e89-7a43-4335-8661-c4dbe95298ac")
-		)
-		(pin "6"
-			(uuid "09a25288-c71e-4ae1-bd64-8510d7dd964f")
-		)
-		(pin "5"
-			(uuid "3f5b271c-5dae-4c86-b627-1ed9f1f6d8ba")
-		)
-		(pin "2"
-			(uuid "c9da9b04-1fe7-43df-a31a-e26587ebd7e4")
-		)
-		(pin "8"
-			(uuid "848fc1d5-3fa7-42d1-897c-3b96791fedad")
-		)
-		(instances
-			(project "openoshi-lightboard"
-				(path "/3cd9b0e5-3136-42a9-9d8a-7f3541f9f7ee"
-					(reference "Q3")
 					(unit 1)
 				)
 			)
@@ -4480,97 +4251,6 @@
 			(project "openoshi-lightboard"
 				(path "/3cd9b0e5-3136-42a9-9d8a-7f3541f9f7ee"
 					(reference "R6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:CSD16301Q2")
-		(at 241.3 102.87 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4de97a79-5eba-48e2-b638-f5f32aecb6b9")
-		(property "Reference" "Q2"
-			(at 247.65 101.5999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "CSD16301Q2"
-			(at 247.65 104.1399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_SON:Texas_DQK"
-			(at 246.38 104.775 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/csd16301q2.pdf"
-			(at 246.38 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "5A Id, 25V Vds, NexFET N-Channel Power MOSFET, 19mOhm Ron, SON-6"
-			(at 241.3 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "0254969a-0a85-47c3-b843-f750b3f6303d")
-		)
-		(pin "7"
-			(uuid "19e94642-5a3c-4832-9ccd-2ad7d9f2e1f9")
-		)
-		(pin "1"
-			(uuid "fca6b166-48ea-4aba-b05b-37a8da86d7a4")
-		)
-		(pin "4"
-			(uuid "221cadad-000e-4926-8102-75e394e4e1ec")
-		)
-		(pin "6"
-			(uuid "134529d9-fe57-432e-af46-292c096ccf9f")
-		)
-		(pin "5"
-			(uuid "4ed26324-a1dc-4382-9978-0b8d73b7081f")
-		)
-		(pin "2"
-			(uuid "904791ea-0892-4e9e-bae3-b855664f688a")
-		)
-		(pin "8"
-			(uuid "25194b38-738a-4854-847f-3a9b0d6d093e")
-		)
-		(instances
-			(project "openoshi-lightboard"
-				(path "/3cd9b0e5-3136-42a9-9d8a-7f3541f9f7ee"
-					(reference "Q2")
 					(unit 1)
 				)
 			)
@@ -5498,7 +5178,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "CSD16301Q2"
+		(property "Value" "CSD17318Q2"
 			(at 220.98 109.2199 0)
 			(effects
 				(font
@@ -5518,7 +5198,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/csd16301q2.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/csd17318q2.pdf"
 			(at 219.71 111.76 0)
 			(effects
 				(font
@@ -5528,7 +5208,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "5A Id, 25V Vds, NexFET N-Channel Power MOSFET, 19mOhm Ron, SON-6"
+		(property "Description" "10A Id, 30V Vds, NexFET N-Channel Power MOSFET, 15.1mOhm Ron, SON-6"
 			(at 214.63 107.95 0)
 			(effects
 				(font
@@ -5900,6 +5580,268 @@
 			(project "openoshi-lightboard"
 				(path "/3cd9b0e5-3136-42a9-9d8a-7f3541f9f7ee"
 					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:CSD16301Q2")
+		(at 229.87 140.97 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a2b5f346-c7ac-46c7-81d9-3e811931ece3")
+		(property "Reference" "Q3"
+			(at 236.22 139.6999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CSD17318Q2"
+			(at 236.22 142.2399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:Texas_DQK"
+			(at 234.95 142.875 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/csd17318q2.pdf"
+			(at 234.95 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "10A Id, 30V Vds, NexFET N-Channel Power MOSFET, 15.1mOhm Ron, SON-6"
+			(at 229.87 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "a88fe6b5-eb8b-483f-a28f-cbc139f3542f")
+		)
+		(pin "7"
+			(uuid "55c8cd1c-053c-48b9-9e53-ea7ce820dd23")
+		)
+		(pin "1"
+			(uuid "bf52073e-3f63-45ea-a072-198e8c3552de")
+		)
+		(pin "4"
+			(uuid "ef9597b8-ddda-44d6-aa60-11d8e5616ad6")
+		)
+		(pin "6"
+			(uuid "d2ac38dc-f0e3-4a75-a6cb-04ab28cc7208")
+		)
+		(pin "5"
+			(uuid "ecf11979-de9c-4335-8349-6cc91b20db2a")
+		)
+		(pin "2"
+			(uuid "0b8610d0-b905-42d7-947c-a517818174c4")
+		)
+		(pin "8"
+			(uuid "9264d2c6-c7af-4c04-bb23-ff09e221d034")
+		)
+		(instances
+			(project "openoshi-lightboard"
+				(path "/3cd9b0e5-3136-42a9-9d8a-7f3541f9f7ee"
+					(reference "Q3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Battery_Management:MCP73831-2-OT")
+		(at 54.61 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a616c888-b0a7-46fd-bbba-0efff7b983d7")
+		(property "Reference" "U3"
+			(at 58.42 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MCP73831-2-OT"
+			(at 58.42 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+			(at 55.88 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf"
+			(at 54.61 124.968 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Single cell, Li-Ion/Li-Po charge management controller, 4.20V, Tri-State Status Output, in SOT23-5 package"
+			(at 54.61 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d8210a6a-0eaa-45fc-b71a-cf481cffc901")
+		)
+		(pin "4"
+			(uuid "620152be-3172-4daa-8a26-2c4cc41e97e2")
+		)
+		(pin "1"
+			(uuid "68f16a5e-e9cf-41c8-ba33-bc9e310655b5")
+		)
+		(pin "3"
+			(uuid "21d77f48-77dd-4a06-901c-65b043a37d6a")
+		)
+		(pin "5"
+			(uuid "b3e83e88-827e-4ea9-b66e-f5181f21b2f7")
+		)
+		(instances
+			(project ""
+				(path "/3cd9b0e5-3136-42a9-9d8a-7f3541f9f7ee"
+					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:CSD16301Q2")
+		(at 241.3 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "aa57b394-03d1-4ab2-9d94-e7ad4399d884")
+		(property "Reference" "Q2"
+			(at 247.65 101.5999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CSD17318Q2"
+			(at 247.65 104.1399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:Texas_DQK"
+			(at 246.38 104.775 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/csd17318q2.pdf"
+			(at 246.38 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "10A Id, 30V Vds, NexFET N-Channel Power MOSFET, 15.1mOhm Ron, SON-6"
+			(at 241.3 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "5220bc36-05ed-462e-8f10-c397de7dd3ed")
+		)
+		(pin "7"
+			(uuid "892a49a0-835f-4e14-8631-8f52100a237b")
+		)
+		(pin "1"
+			(uuid "7f3bfac6-85ba-4ab6-bee5-ed2bf4c74961")
+		)
+		(pin "4"
+			(uuid "b9dd9414-5e45-4adb-b4b5-2b7bd3d91c79")
+		)
+		(pin "6"
+			(uuid "76c6a929-de2f-4c7c-9521-cc3ce634fba6")
+		)
+		(pin "5"
+			(uuid "c7ac160a-f3a2-497a-9198-1d6bc6808cd6")
+		)
+		(pin "2"
+			(uuid "bdf7ab1d-ed50-4f57-979d-3f62e10bb4a1")
+		)
+		(pin "8"
+			(uuid "c9c6b217-18c9-46dd-bd74-3c22c5dfd23d")
+		)
+		(instances
+			(project "openoshi-lightboard"
+				(path "/3cd9b0e5-3136-42a9-9d8a-7f3541f9f7ee"
+					(reference "Q2")
 					(unit 1)
 				)
 			)
@@ -6446,95 +6388,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Battery_Management:MCP73831-3-MC")
-		(at 54.61 106.68 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "c8f14b09-9d48-484e-9310-3dace063a9e6")
-		(property "Reference" "U3"
-			(at 63.246 112.776 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MCP73831-3-MC"
-			(at 56.896 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.7x1.4mm"
-			(at 55.88 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf"
-			(at 50.8 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Single cell, Li-Ion/Li-Po charge management controller, 4.35V, Tri-State Status Output, in DFN-8 package"
-			(at 54.61 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5270c09a-1604-4695-a337-058ec3d4f6b9")
-		)
-		(pin "2"
-			(uuid "26fb6709-39b7-4547-891f-92b00c645d9a")
-		)
-		(pin "7"
-			(uuid "c64f5639-6832-4b5c-adbc-451f43383157")
-		)
-		(pin "8"
-			(uuid "9d764843-409c-46d0-89d2-ab79039644b2")
-		)
-		(pin "3"
-			(uuid "7af8e64f-2374-40d1-b3be-f4fc9ed98bb7")
-		)
-		(pin "4"
-			(uuid "4b7bee03-a124-4e13-aa4e-5a54ac61899a")
-		)
-		(pin "6"
-			(uuid "605d9cf6-3320-4c11-8808-c1923ae91bac")
-		)
-		(pin "5"
-			(uuid "d5db4098-56a1-4b84-8423-ec5ef33db9f1")
-		)
-		(instances
-			(project ""
-				(path "/3cd9b0e5-3136-42a9-9d8a-7f3541f9f7ee"
-					(reference "U3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "MCU_WCH_CH32V0:CH32V003FxUx")
 		(at 120.65 151.13 0)
 		(unit 1)
@@ -6941,6 +6794,97 @@
 			(project ""
 				(path "/3cd9b0e5-3136-42a9-9d8a-7f3541f9f7ee"
 					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:CSD16301Q2")
+		(at 252.73 133.35 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dd42bd70-7784-4ea3-be56-7de4eb7724c0")
+		(property "Reference" "Q4"
+			(at 259.08 132.0799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CSD17318Q2"
+			(at 259.08 134.6199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:Texas_DQK"
+			(at 257.81 135.255 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/csd17318q2.pdf"
+			(at 257.81 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "10A Id, 30V Vds, NexFET N-Channel Power MOSFET, 15.1mOhm Ron, SON-6"
+			(at 252.73 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "734bedde-2282-48b4-94f6-0fdfd4b47388")
+		)
+		(pin "7"
+			(uuid "51b40691-2c38-47a1-a88a-72bf62f78671")
+		)
+		(pin "1"
+			(uuid "05b90f25-7550-4001-91ea-c7ace365aa34")
+		)
+		(pin "4"
+			(uuid "4ed409f9-e77d-439d-90ea-02fda1505f69")
+		)
+		(pin "6"
+			(uuid "086e60da-220e-4d0d-947a-eec092e960be")
+		)
+		(pin "5"
+			(uuid "e8d1b525-0252-42e1-acad-74d717f9ce56")
+		)
+		(pin "2"
+			(uuid "435cde84-f107-4cbd-ae6a-10f5c5777005")
+		)
+		(pin "8"
+			(uuid "159e7c09-73a0-4fa4-9d6e-f5e3ea9d06d8")
+		)
+		(instances
+			(project "openoshi-lightboard"
+				(path "/3cd9b0e5-3136-42a9-9d8a-7f3541f9f7ee"
+					(reference "Q4")
 					(unit 1)
 				)
 			)
