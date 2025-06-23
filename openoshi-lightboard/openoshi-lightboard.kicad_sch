@@ -3482,12 +3482,12 @@
 		)
 		(uuid "27d979e2-57ce-4503-8499-5db1342b6062")
 	)
-	(text "CSD17318Q2 is WSON6 alternative"
+	(text "CSD17318Q2 is old WSON6 choice\nPMZ600UNEYL is budget alternative (not pin compat.)"
 		(exclude_from_sim no)
 		(at 228.092 159.004 0)
 		(effects
 			(font
-				(size 2.54 2.54)
+				(size 1.905 1.905)
 			)
 		)
 		(uuid "67f515a6-b87e-4285-a563-fb9bb4fd591c")
@@ -5082,7 +5082,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PMZ600UNEYL"
+		(property "Value" "CSD17484F4"
 			(at 220.98 109.2199 0)
 			(effects
 				(font
@@ -6245,7 +6245,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PMZ600UNEYL"
+		(property "Value" "CSD17484F4"
 			(at 236.22 142.2399 0)
 			(effects
 				(font
@@ -6285,13 +6285,13 @@
 			)
 		)
 		(pin "2"
-			(uuid "c4763876-65bd-4932-9576-e665254b15e2")
+			(uuid "c4763876-65bd-4932-9576-e665254b15e3")
 		)
 		(pin "1"
-			(uuid "a1bcba18-3503-4c46-bfab-6fe7e641730c")
+			(uuid "a1bcba18-3503-4c46-bfab-6fe7e641730d")
 		)
 		(pin "3"
-			(uuid "d5db0a18-ab67-4fa4-94bf-c37728a8d73a")
+			(uuid "d5db0a18-ab67-4fa4-94bf-c37728a8d73b")
 		)
 		(instances
 			(project ""
@@ -7165,7 +7165,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PMZ600UNEYL"
+		(property "Value" "CSD17484F4"
 			(at 251.46 101.5999 0)
 			(effects
 				(font
@@ -7205,13 +7205,13 @@
 			)
 		)
 		(pin "2"
-			(uuid "c4763876-65bd-4932-9576-e665254b15e2")
+			(uuid "c4763876-65bd-4932-9576-e665254b15e4")
 		)
 		(pin "1"
-			(uuid "a1bcba18-3503-4c46-bfab-6fe7e641730c")
+			(uuid "a1bcba18-3503-4c46-bfab-6fe7e641730e")
 		)
 		(pin "3"
-			(uuid "d5db0a18-ab67-4fa4-94bf-c37728a8d73a")
+			(uuid "d5db0a18-ab67-4fa4-94bf-c37728a8d73c")
 		)
 		(instances
 			(project ""
@@ -8327,7 +8327,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PMZ600UNEYL"
+		(property "Value" "CSD17484F4"
 			(at 269.24 134.6199 0)
 			(effects
 				(font
@@ -8367,13 +8367,13 @@
 			)
 		)
 		(pin "2"
-			(uuid "c4763876-65bd-4932-9576-e665254b15e2")
+			(uuid "c4763876-65bd-4932-9576-e665254b15e5")
 		)
 		(pin "1"
-			(uuid "a1bcba18-3503-4c46-bfab-6fe7e641730c")
+			(uuid "a1bcba18-3503-4c46-bfab-6fe7e641730f")
 		)
 		(pin "3"
-			(uuid "d5db0a18-ab67-4fa4-94bf-c37728a8d73a")
+			(uuid "d5db0a18-ab67-4fa4-94bf-c37728a8d73d")
 		)
 		(instances
 			(project ""
