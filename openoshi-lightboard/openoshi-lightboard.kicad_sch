@@ -5402,7 +5402,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Keystone_5019_Miniature"
+		(property "Footprint" "openoshi-lightboard:Battery_SolderPad"
 			(at 57.15 161.29 0)
 			(effects
 				(font
@@ -6838,7 +6838,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Keystone_5019_Miniature"
+		(property "Footprint" "openoshi-lightboard:Battery_SolderPad"
 			(at 57.15 154.94 0)
 			(effects
 				(font
