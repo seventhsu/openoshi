@@ -3472,6 +3472,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "TIM1_CH3"
+		(exclude_from_sim no)
+		(at 89.154 150.622 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "02beb43d-462a-489a-81e4-419b28f046e0")
+	)
 	(text "This is actually 4.5V;\nit reduces wasted power\nin the current-limiting\nresistors for the LEDs"
 		(exclude_from_sim no)
 		(at 181.356 44.704 0)
@@ -3482,6 +3492,16 @@
 		)
 		(uuid "0d48a98f-8396-4a6d-b243-87751db0473e")
 	)
+	(text "TIM1_CH2"
+		(exclude_from_sim no)
+		(at 89.154 155.702 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "202e64d2-be96-4fdd-85e6-3f14a7127217")
+	)
 	(text "CSD17318Q2 is old WSON6 choice\nCSD17484F4 is smaller FemtoFET alternative (too small for most fabs)"
 		(exclude_from_sim no)
 		(at 228.092 159.004 0)
@@ -3491,6 +3511,26 @@
 			)
 		)
 		(uuid "67f515a6-b87e-4285-a563-fb9bb4fd591c")
+	)
+	(text "TIM1_CH1"
+		(exclude_from_sim no)
+		(at 89.154 148.082 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "6ded09fc-ce88-4b75-9a6c-15aaf5af5406")
+	)
+	(text "TIM1_CH4"
+		(exclude_from_sim no)
+		(at 149.352 147.828 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "e6c52380-6461-4fb4-8474-f18ae6ff5800")
 	)
 	(text "TLV61220 is pin-compatible and cheaper for lower current\nTPS631000 is a buck-boost option to reduce output <4.2V"
 		(exclude_from_sim no)
