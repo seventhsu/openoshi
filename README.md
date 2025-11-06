@@ -18,5 +18,5 @@ This project consists of:
 - The PCB is made to JLCPCB 2-layer specifications and tolerances as of July 2025. Modify if needed to meet your preferred PCB supplier's capabilities.
 - Control software for the CH32V003 written in C is provided, and can be compiled and flashed to the board with a single wire using the programming pad on the bottom. Note: you will need a WCH-Link programmer or equivalent.
 
-![Lightboard front](pictures/lightboard-front.png)
-![Lightboard back](pictures/lightboard-back.png)
+![Lightboard top side](pictures/lightboard-front.png)
+![Lightboard bottom side](pictures/lightboard-back.png)
