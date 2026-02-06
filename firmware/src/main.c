@@ -1,4 +1,4 @@
-#include "ch32fun.h"
+#include "../ch32fun/ch32fun/ch32fun.h"
 #include <stdio.h>
 
 #define HPRE_PRESCALED_PERIPH_CLOCK (FUNCONF_SYSTEM_CORE_CLOCK / 3)
@@ -15,11 +15,20 @@ uint8_t colorTable[][4] = {
 	{0xff,	0x0,	0x0,	0x0},   // Color blue
     {0xff,	0x0,	0xff,	0x0},   // Color magenta
 	{0x0,	0x0,	0x0,	0xff}, // Color white
-
 };
 
 // The color the penlight should display if it was on (index into colorTable)
 static volatile int currColor;
+
+void adcInit(void) {
+    RCC->APB2PCENR |= RCC_APB2Periph_ADC1;
+
+    // Reset ADC1 to init all regs
+    RCC->APB2PRSTR |= RCC_APB2Periph_ADC1;
+	RCC->APB2PRSTR &= ~RCC_APB2Periph_ADC1;
+
+    // TODO...
+}
 
 void tim1PwmInit(void) {
     RCC->APB2PCENR |= RCC_APB2Periph_TIM1;
@@ -47,8 +56,8 @@ void tim1PwmInit(void) {
     TIM1->ATRLR = autoreload;
 
     // Set mode = b110 (PWM mode 1, left aligned) and enable shadow regs ("preload") for all
-    TIM1->CHCTLR1 |= TIM_OC2M_2 | TIM_OC2M_1 | OC2PE | TIM_OC1M_2 | TIM_OC1M_1 | OC1PE;
-    TIM1->CHCTLR2 |= TIM_OC4M_2 | TIM_OC4M_1 | OC4PE | TIM_OC3M_2 | TIM_OC3M_1 | OC3PE;
+    TIM1->CHCTLR1 |= TIM_OC2M_2 | TIM_OC2M_1 | TIM_OC2PE | TIM_OC1M_2 | TIM_OC1M_1 | TIM_OC1PE;
+    TIM1->CHCTLR2 |= TIM_OC4M_2 | TIM_OC4M_1 | TIM_OC4PE | TIM_OC3M_2 | TIM_OC3M_1 | TIM_OC3PE;
 
     // CTLR1 defaults to up-count, UEVs generated (auto-copy from shadow reg), edge align
 	TIM1->CTLR1 |= TIM_ARPE; // enable auto-reload of preload
@@ -69,15 +78,12 @@ void updateColor(void) {
 
 int main(void) {
     SystemInit();
+    Delay_Ms(100);
+
     funGpioInitAll(); // Enables AFIO + ports A C D
 
     tim1PwmInit();
-
-    RCC->APB2PCENR |= RCC_APB2Periph_ADC1;
-
-    // Reset ADC1 to init all regs
-    RCC->APB2PRSTR |= RCC_APB2Periph_ADC1;
-	RCC->APB2PRSTR &= ~RCC_APB2Periph_ADC1;
+    adcInit();
     
     // Assign directions to general-purpose pins
     funPinMode(PA1, GPIO_CFGLR_IN_PUPD); // batt CHG_STAT
@@ -85,7 +91,7 @@ int main(void) {
     funPinMode(PC3, GPIO_CFGLR_OUT_2Mhz_PP); // VREG_EN
     funPinMode(PD6, GPIO_CFGLR_IN_PUPD); // SW1
     funPinMode(PD5, GPIO_CFGLR_IN_PUPD); // SW2
-    // Explicitly enable input pullup resistors for SWy by writing to GPIOx_OUTDR
+    // Explicitly enable input-pullup resistors for SWy by writing to GPIOx_OUTDR
     funDigitalWrite(PD6, FUN_HIGH);
     funDigitalWrite(PD5, FUN_HIGH);
 
