@@ -8,11 +8,12 @@
 
 /***********************************************************
  * Personal notes about the clock setup:
- * PLL & HSI are enabled in ch32fun.h's funconf default defines, making SYSCLK=48MHz
- * This number in itself is default-defined in FUNCONF_SYSTEM_CORE_CLOCK
- * A SYSCLK >= 24MHz necessitates flash wait state in FLASH->ACTLR...
- * which ch32fun.c does automatically based on FUNCONF_SYSTEM_CORE_CLOCK's value
- * And RCC_HPRE's power-on reset value b0010 results in default HB periph clk of 16MHz.
+ * PLL & HSI are enabled in ch32fun.h's funconf default defines, making SYSCLK = 48MHz
+ * This number in itself is default-defined in FUNCONF_SYSTEM_CORE_CLOCK.
+ * The RM recommends adding a flash wait state in FLASH->ACTLR when SYSCLK >= 24MHz...
+ * which ch32fun.c does automatically based on FUNCONF_SYSTEM_CORE_CLOCK's value.
+ * By POR defaults, RCC_HPRE = b0010 and PLL off results in default HB periph clk of 8MHz,
+ * but RCC_HPRE is overridden to DIV1 by SystemInit(), so periph clk = SYSCLK = 48MHz.
 */
 
 #endif//_FUNCONFIG_H
