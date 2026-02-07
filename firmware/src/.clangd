@@ -1,0 +1,16 @@
+# handy config for linting GCC RISCV C using Clangd
+CompileFlags:
+  Add:
+    - -xc                           # Force C language (prevents .h being treated as ObjC++)
+    - --target=riscv32-unknown-elf  # Target RISC-V, not host x86
+    - -march=rv32ec
+    - -mabi=ilp32e
+    - -DCH32V003=1
+    - -std=c99
+    - -I.
+    - -I../ch32fun/ch32fun
+    - -I../ch32fun/extralibs
+    - -isystem/usr/include/newlib
+  Remove:
+    - -msmall-data-limit=*          # GCC-only, not understood by clangd
+    - -flto
