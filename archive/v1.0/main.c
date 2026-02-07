@@ -1,3 +1,10 @@
+/*
+ * LightstickSoftware.c
+ *
+ * Created: 6/22/2023 9:30:34 PM
+ * Author : alial
+ */
+
 #ifndef F_CPU
 #define F_CPU 8000000UL
 #endif //F_CPU
@@ -13,13 +20,11 @@
 #define bitmask_R 0b00000001 // Red channel is on TIM3A, PORTD0
 #define bitmask_B 0b00000100 // Blue channel is on TIM3B, PORTD2
 
-// colortable[i][0:3] represent R, G, B, W channels of one color setting
 uint16_t colortable[][4] = {
 	{0x1ff,	0x0,	0x0,	0x0},
 	{0x0,	0x1ff,	0x0,	0x0},
 	{0x0,	0x0,	0x1ff,	0x0},
-	{0x0,	0x0,	0x0,	0x1ff},
-
+	{0x0,	0x0,	0x0,	0x1ff}
 };
 
 
