@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2025-2026 Seventhsu
+
 TARGET     := main
 TARGET_MCU ?= CH32V003
 CH32FUN := ../ch32fun/ch32fun

@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2025-2026 Seventhsu
+
 #include "../ch32fun/ch32fun/ch32fun.h"
 #include <stdio.h>
 
