@@ -22,7 +22,7 @@ uint8_t colorTable[][4] = {
     {0xff,	0xff,	0x0,	0x0},   // Color cyan
 	{0xff,	0x0,	0x0,	0x0},   // Color blue
     {0xff,	0x0,	0xff,	0x0},   // Color magenta
-	{0x0,	0x0,	0x0,	0xff}, // Color white
+	{0x0,	0x0,	0x0,	0xff},  // Color white
 };
 
 // The color the penlight should display if it was on (index into colorTable)
@@ -35,7 +35,7 @@ void EXTI7_0_IRQHandler(void) __attribute__((interrupt));
 void EXTI7_0_IRQHandler(void) {
     if (EXTI->INTFR & EXTI_Line6)  btnEvent |= 0x01;  // SW1
     if (EXTI->INTFR & EXTI_Line5)  btnEvent |= 0x02;  // SW2
-    EXTI->INTFR = EXTI_Line6 | EXTI_Line5;             // Acknowledge both
+    EXTI->INTFR = EXTI_Line6 | EXTI_Line5;          // Acknowledge both
 }
 
 void tim1PwmInit(void) {
@@ -138,6 +138,22 @@ void exitStandby(void) {
     btnEvent = 0;                       // Clear any events from the wake press
 }
 
+uint16_t readBatteryMv(void) {
+    // Enable internal Vrefint on ADC channel 8
+    ADC1->CTLR2 |= ADC_TSVREFE;
+
+    // Read internal 1.2V reference (channel 8)
+    uint16_t vref_raw = funAnalogRead(ADC_Channel_Vrefint);
+
+    // Disable Vrefint to save power
+    ADC1->CTLR2 &= ~ADC_TSVREFE;
+
+    // VDD = Vrefint_known * ADC_max / vref_raw
+    // In mV: (1200 * 1023) / vref_raw
+    if (vref_raw == 0) return 0; // Guard against division by zero
+    return (uint16_t)((1200UL * 1023) / vref_raw);
+}
+
 int main(void) {
     SystemInit();
     Delay_Ms(5000); // Reprogramming window: allow reflashing before sleep
@@ -149,7 +165,7 @@ int main(void) {
 
     // Assign directions to general-purpose pins
     funPinMode(PA1, GPIO_CFGLR_IN_PUPD);        // batt CHG_STAT
-    funPinMode(PA2, GPIO_CFGLR_IN_ANALOG);      // vbatt adc, on AIN0
+    //funPinMode(PA2, GPIO_CFGLR_IN_ANALOG);      // vbatt adc, on AIN0
     funPinMode(PC3, GPIO_CFGLR_OUT_2Mhz_PP);    // VREG_EN
     funPinMode(PD6, GPIO_CFGLR_IN_PUPD);        // SW1
     funPinMode(PD5, GPIO_CFGLR_IN_PUPD);        // SW2
